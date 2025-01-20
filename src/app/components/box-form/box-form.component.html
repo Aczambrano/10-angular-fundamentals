@@ -1,0 +1,23 @@
+<article class="form">
+    <div class="form__title">(Y)our poll.</div>
+
+    <div class="form__container" [ngClass]="{ 'form--show-results': formSubmitted }" role="form"
+        aria-labelledby="pollForm">
+        <div class="form__question" aria-live="polite">Vibe Check?</div>
+
+        <form (ngSubmit)="onSubmit()" #pollForm="ngForm" aria-labelledby="pollForm">
+            <div class="form__options">
+               
+                @for(option of options; track $index) {
+                <label class="form__option">
+                    <input type="radio" [id]="option.value" name="vibe" [value]="option.value"
+                        [(ngModel)]="selectedOption" tabindex="0">
+                    <span class="form__option-text">{{ option.label }}</span>
+                    <span class="form__option-percentage">{{ option.percentage }}</span>
+                </label>
+                }
+            </div>
+            <button type="submit" class="form__submit-button" tabindex="0">Submit</button>
+        </form>
+    </div>
+</article>

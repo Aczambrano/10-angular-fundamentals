@@ -1,0 +1,27 @@
+@use './../../ui/styles/mixins.scss' as mixins;
+
+.box-video {
+    @include mixins.box-common(11px, normal, white, left);
+    align-items: stretch;
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgb(48, 48, 48);
+
+    &__text-start {
+        padding: 5px;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+    }
+
+    &__video iframe {
+        width: 100%;
+        height: 350px;
+    }
+
+    &__text-end {
+        font-size: 11px;
+        margin-left: 5px;
+        margin-right: 12px;
+        padding: 5px;
+    }
+}

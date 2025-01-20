@@ -1,0 +1,46 @@
+@use './../../ui/styles/mixins.scss' as mixins;
+
+.box-small-left {
+    line-height: 1.4;
+    @include mixins.box-common(20px, normal, transparent, center);
+
+    &__content {
+        font-size: 44px;
+        font-weight: 400;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: rgb(48, 48, 48);
+
+        img {
+            border-radius: 50%;
+            max-width: 40px;
+            max-height: 40px;
+            background-color: #e0bff4;
+        }
+    }
+
+    &__yellow {
+        background-color: rgb(249 236 161);
+        padding: 1%;
+    }
+
+    &__button {
+        background-color: #efefef;
+        line-height: 1.4;
+        font-family: 'IBM Plex Mono', monospace;
+        color: rgb(48, 48, 48);
+        font-size: 11px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        margin-left: 5px;
+        &:hover {
+            background-color: #e6e3e3;
+            transform: scale(1.05);
+            color: #333;
+
+        }
+    }
+}

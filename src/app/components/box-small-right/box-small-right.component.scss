@@ -1,0 +1,100 @@
+@use './../../ui/styles/mixins.scss' as mixins;
+
+.box-small-right {
+    @include mixins.flex(center, start, 20px);
+}
+
+.card-weather {
+    @include mixins.card(1);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    &__title {
+        text-align: center;
+        color: #333;
+        margin: 5px;
+    }
+
+    &__info {
+        background: white;
+        border-radius: 6px;
+        margin: 5px;
+        color: #333;
+        text-align: center;
+    }
+
+    &__img {
+        display: flex;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+}
+
+.card {
+    @include mixins.card(2);
+    align-items: center;
+
+    &__timer-content {
+        @include mixins.flex(center, center, 15px);
+        flex-direction: column;
+    }
+
+    &__timer-display {
+        @include mixins.typography('IBM Plex Mono', 42px, gray);
+        font-weight: 300;
+        display: flex;
+    }
+
+    &__click-button {
+        background: #f5f5f5;
+        border: none;
+        padding: 10px 50px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        align-items: center;
+        line-height: 1.4;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 14px;
+        color: rgb(48, 48, 48);
+        margin-bottom: 15px;
+    }
+
+    &__click-button:hover {
+        background: #eee;
+    }
+
+
+    &__last-click {
+        @include mixins.flex(center, start, 10px);
+        padding-bottom: 2%;
+        margin-left: 10px;
+    }
+
+    &__user-avatar {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #98ff98;
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        color: #333;
+        margin: 5px;
+    }
+}

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { MenuComponent } from '../menu/menu.component';
+import { AvatarComponent } from "../avatar/avatar.component";
 
 @Component({
   selector: 'app-header',
-  imports: [MenuComponent],
+  imports: [AvatarComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

@@ -1,14 +1,15 @@
-<header class="header">
-  <nav>
-    <app-menu />
-  </nav>
-  <div class="header__actions">
-    <a class="header__link" href="#">Sign In</a>
-    <button class="header__button">
-      <span>Get started</span>
-      <i aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="main-nav__link__icon"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16 11-4 4-4-4M12 13.5v-9M4 20h16"></path></g></svg>
-      </i>
-    </button>
-  </div>
+<header class="header" role="banner">
+    <nav class="header__left" aria-label="Left menu">
+        <div class="header__icon">
+            <img src="assets/images/favicon-32x32.png" alt="Favicon">
+        </div>
+        <button class="header__button" aria-label="Selected Work" >Selected Work</button>
+        <button class="header__button_icon" aria-label="Information">i</button>
+    </nav>
+
+    <nav class="header__right" aria-label="Right menu">
+        <app-avatar image="assets/images/avatar-01.webp" avatarClass="header__avatar--red" size="40px"></app-avatar>
+        <app-avatar image="assets/images/avatar-02.webp" avatarClass="header__avatar--yellow" size="40px"></app-avatar>
+        <app-avatar image="assets/images/avatar-03.webp" avatarClass="header__avatar--lilac" size="40px"></app-avatar>
+    </nav>
 </header>

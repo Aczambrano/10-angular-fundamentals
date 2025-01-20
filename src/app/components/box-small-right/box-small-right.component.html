@@ -1,0 +1,28 @@
+<article class="box-small-right">
+    <div class="card-weather">
+      <div class="card-weather__title">(Y)our weather.</div>
+      <div class="card-weather__content">
+        <div class="card-weather__img">
+          <img src="assets/images/day-cloudy.webp" alt="Cloudy weather">
+        </div>
+        <div class="card-weather__info">28°F & Clouds (NYC)</div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card__title">(Y)our button</div>
+      <div class="card__timer-content">
+        <div class="card__timer-display" aria-live="polite">{{ displayTime }}</div>
+        <button class="card__click-button" (click)="toggleTimer()" aria-label="Click button">
+          {{ running ? 'Stop' : 'Start' }} 
+        </button>
+      </div>
+      <div class="card__last-click">
+        <div class="card__user-avatar">
+          <img src="assets/images/avatar-01.webp" alt="Avatar 01">
+        </div>
+        <span>Anderson clicked it last.</span>
+      </div>
+    </div>
+  </article>
+  

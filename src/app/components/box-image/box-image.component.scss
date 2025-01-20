@@ -1,0 +1,11 @@
+@use './../../ui/styles/mixins.scss' as mixins;
+
+.box-image-left {
+    @include mixins.box-common(20px, bold, white, center);
+
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+    }
+}

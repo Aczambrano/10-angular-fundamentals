@@ -1,0 +1,24 @@
+<article class="box-profile">
+    <div class="box-profile__container">
+        <div class="box-profile__title" id="profile-title">(Y)our profile.</div>
+
+        <div class="box-profile__image-container">
+            <app-avatar image="assets/images/b2_e3_ha1_he2.webp" avatarClass="header__avatar--red" size="180px"></app-avatar>
+
+        </div>
+
+        <div class="box-profile__name-input-container">
+            <input id="name-input" type="text" 
+            class="box-profile__name-input"
+            [(ngModel)]="name" 
+            placeholder="Enter your name"
+            (ngModelChange)="onChangeName()" />
+
+            <div class="box-profile__input-placeholder" aria-hidden="true">Input your own name.</div>
+        </div>
+
+        <div class="box-profile__customization">
+            <img src="assets/images/styles.png" alt="Customization options">
+        </div>
+    </div>
+</article>
