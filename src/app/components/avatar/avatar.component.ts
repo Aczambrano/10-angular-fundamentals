@@ -15,4 +15,6 @@ export class AvatarComponent {
 
   public size = input <string>();
 
+
+  
 }

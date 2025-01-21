@@ -8,12 +8,12 @@ import { BoxDrawComponent } from "../box-draw/box-draw.component";
 import { BoxFormComponent } from "../box-form/box-form.component";
 import { BoxSmallRightComponent } from "../box-small-right/box-small-right.component";
 import { BoxImageRightComponent } from "../box-image-right/box-image-right.component";
-import { BoxWhitTextRightComponent } from "../box-whit-text-right/box-whit-text-right.component";
 import { BoxVideoComponent } from "../box-video/box-video.component";
+import { BoxCardComponent } from "../box-card/box-card.component";
 
 @Component({
   selector: 'app-main',
-  imports: [BoxSmallLeftComponent, BoxImageComponent, BoxColorComponent, BoxWithTextComponent, BoxProfileComponent, BoxDrawComponent, BoxFormComponent, BoxSmallRightComponent, BoxImageRightComponent, BoxWhitTextRightComponent, BoxVideoComponent],
+  imports: [BoxSmallLeftComponent, BoxImageComponent, BoxColorComponent, BoxWithTextComponent, BoxProfileComponent, BoxDrawComponent, BoxFormComponent, BoxSmallRightComponent, BoxImageRightComponent, BoxVideoComponent, BoxCardComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })

@@ -3,42 +3,42 @@
 
 .box-draw {
     @include mixins.box-common(18px, normal, white, center);
-  
+
     &__text {
-      line-height: 1.4;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      text-align: center;
+        line-height: 1.4;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        text-align: center;
     }
-  
+
     &__img {
-      display: flex;
-      align-items: flex-start;
-  
-      &-left {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__img-left {
         flex: 4;
         display: flex;
         padding: 2%;
         margin-bottom: 3%;
-  
+
         img {
-          max-width: 100%;
-          max-height: 100%;
-          box-shadow: gray -10px 10px 0px;
-          border-radius: 8px;
+            max-width: 100%;
+            max-height: 100%;
+            box-shadow: gray -10px 10px 0px;
+            border-radius: 8px;
         }
-      }
-  
-      &-right {
+    }
+
+    &__img-right {
         flex: 1;
         display: flex;
         justify-content: end;
         margin-top: 2%;
-  
+
         img {
-          max-width: 40%;
-          max-height: 100%;
+            max-width: 40%;
+            max-height: 100%;
         }
-      }
     }
-  }
+}

@@ -4,13 +4,11 @@
             <div class="container__boxes-left" aria-labelledby="left-column">
                 <app-box-small-left [dynamicName]="dynamicName"></app-box-small-left>
                 <app-box-color></app-box-color>
-                <app-box-image [imageSrc]="'assets/images/Bitmap-2.webp'"></app-box-image>
-                <app-box-with-text [imageSrc]="'assets/images/plant-05.webp'"
-                    [avatarSrc]="'assets/images/avatar-01.webp'" 
-                    [mainText]="'(Y)our virtual houseplant.'"
-                    [footerName]="'Nietzsche'">
-                    ></app-box-with-text>
-                <app-box-image [imageSrc]="'assets/images/Bitmap-2.webp'"></app-box-image>
+                <app-box-card [imageSrc]="'assets/images/Bitmap-2.webp'"></app-box-card>
+                <app-box-card [imageSrc]="'assets/images/plant-05.webp'" [avatarSrc]="'assets/images/avatar-01.webp'"
+                    [mainText]="'(Y)our virtual houseplant.'" [footerName]="'Nietzsche'" [showFooterImage]="true"
+                    [hasContent]="true"></app-box-card>
+                <app-box-card [imageSrc]="'assets/images/Bitmap-2.webp'"></app-box-card>
             </div>
         </section>
 
@@ -18,7 +16,7 @@
             <div class="container__boxes-middle">
                 <app-box-profile (nameChanged)="dynamicName = $event"></app-box-profile>
                 <app-box-draw></app-box-draw>
-                <app-box-image [imageSrc]="'assets/images/Screen-Shot-2022-04-13-at-3.47.09-PM.webp'"></app-box-image>
+                <app-box-card [imageSrc]="'assets/images/Screen-Shot-2022-04-13-at-3.47.09-PM.webp'"></app-box-card>
                 <app-box-form></app-box-form>
             </div>
         </section>
@@ -27,21 +25,22 @@
             <div class="container__boxes-right">
                 <app-box-small-right></app-box-small-right>
                 <app-box-image-right></app-box-image-right>
-                <!-- <app-box-with-text 
-                    [mainText]="'Art History 008.'"
-                    [imageSrc]="'assets/images/art-history.webp'"
-                    [footerName]="'Wheatfield - A Confrontation - Agnes Denes 1982'"
-                    [showFooterImage]="false">
-                    </app-box-with-text> -->
-                <app-box-whit-text-right></app-box-whit-text-right>
-                <app-box-video></app-box-video>
-                <app-box-with-text [imageSrc]="'assets/images/chess.png'"
-                    [avatarSrc]="'assets/images/avatar-01.webp'" 
-                    [mainText]="'(Y)our chess match.'"
-                    [footerName]="'Tolstoy made the last move.'">
-                    ></app-box-with-text>
+                <app-box-card [imageSrc]="'assets/images/art-history.webp'" [hasContent]="true"
+                    [footerName]="'Wheatfield - A Confrontation Agnes Denes - 1982'" [showFooterImage]="true"
+                    [mainText]="'Art History 008.'"> </app-box-card>
+                <app-box-card
+                mediaType="video"
+                [videoUrl]="'https://www.youtube.com/embed/0pDE4VX_9Kk'"
+                [videoLabel]="'Chess match video'"
+                [startText]="'(Y)our Watchlist.'"
+                [endText]="'John Berger - Ways of Seeing'">
+              </app-box-card>
+
+                <app-box-card [imageSrc]="'assets/images/chess.png'" [avatarSrc]="'assets/images/avatar-01.webp'"
+                    [mainText]="'(Y)our chess match.'" [footerName]="'Tolstoy made the last move.'"
+                    [showFooterImage]="true" [hasContent]="true"></app-box-card>
             </div>
         </section>
     </div>
-    <app-box-image [imageSrc]="'assets/images/thats-all-folks-01__1_.webp'"></app-box-image>
+    <app-box-card [imageSrc]="'assets/images/thats-all-folks-01__1_.webp'"></app-box-card>
 </main>

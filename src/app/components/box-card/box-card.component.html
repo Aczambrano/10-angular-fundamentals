@@ -1,0 +1,48 @@
+@if (mediaType === 'video') {
+  <article class="box box--video">
+    @if (startText) {
+      <div class="box__text-start" aria-hidden="true">
+        {{startText}}
+      </div>
+    }
+    <div class="box__video">
+      <iframe
+        [src]="safeVideoUrl"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        [attr.aria-label]="videoLabel || 'Video content'">
+      </iframe>
+    </div>
+    @if (endText) {
+      <div class="box__text-end">
+        {{endText}}
+      </div>
+    }
+  </article>
+} @else {
+  <article class="box" [class.box--with-text]="hasContent">
+    @if (!hasContent) {
+      <div class="box__img">
+        <img [src]="imageSrc" [alt]="imageAlt">
+      </div>
+    } @else {
+      <div class="box__text box__text--start">
+        <p>{{mainText}}</p>
+      </div>
+      <div class="box__img">
+        <img [src]="imageSrc" [alt]="imageAlt">
+      </div>
+      @if (showFooter()) {
+        <div class="box__text box__text--end">
+          @if(shouldShowAvatar()){
+            <img [src]="avatarSrc" alt="Avatar">
+          }
+          @if(footerName) {
+            <p [innerHTML]="formatFooterText(footerName)" [class.no-avatar]="!shouldShowAvatar()"></p>
+          }
+        </div>
+      }
+    }
+  </article>
+}
