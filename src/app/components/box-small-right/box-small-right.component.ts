@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { BoxCardComponent } from "../box-card/box-card.component";
 
 @Component({
   selector: 'app-box-small-right',
   templateUrl: './box-small-right.component.html',
-  styleUrls: ['./box-small-right.component.scss']
+  styleUrls: ['./box-small-right.component.scss'],
 })
 export class BoxSmallRightComponent implements OnInit, OnDestroy {
 
